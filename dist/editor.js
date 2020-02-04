@@ -114,6 +114,71 @@ registerBlockType('mytheme-blocks/firstblock', {
 
 /***/ }),
 
+/***/ "./src/blocks/secondblock/index.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/secondblock/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var _jsxFileName = "/var/www/html/gutenberg/training/wp-content/plugins/mytheme-blocks/src/blocks/secondblock/index.js";
+var registerBlockType = wp.blocks.registerBlockType;
+var __ = wp.i18n.__;
+registerBlockType('mytheme-blocks/secondblock', {
+  title: __('Second Block', 'mytheme-blocks'),
+  description: __('Our Second Block', 'mytheme-blocks'),
+  category: 'layout',
+  // adding icon from developer.wordpress.org/resource/dashicons
+  icon: wp.element.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "24",
+    viewBox: "0 0 24 24",
+    width: "24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, wp.element.createElement("path", {
+    d: "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), wp.element.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })),
+  // keywords is a searchable terms, here we are making it translatable
+  keywords: [__('photo', 'mytheme-blocks'), __('image', 'mytheme-blocks')],
+  edit: function edit() {
+    return wp.element.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "Editor");
+  },
+  save: function save() {
+    return wp.element.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "Saved Content");
+  }
+});
+
+/***/ }),
+
 /***/ "./src/editor.js":
 /*!***********************!*\
   !*** ./src/editor.js ***!
@@ -125,7 +190,10 @@ registerBlockType('mytheme-blocks/firstblock', {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_firstblock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/firstblock */ "./src/blocks/firstblock/index.js");
 /* harmony import */ var _blocks_firstblock__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_blocks_firstblock__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _blocks_secondblock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/secondblock */ "./src/blocks/secondblock/index.js");
+/* harmony import */ var _blocks_secondblock__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_secondblock__WEBPACK_IMPORTED_MODULE_1__);
 // this file is repsonsible to import all developed blocks
+
 
 
 /***/ })
