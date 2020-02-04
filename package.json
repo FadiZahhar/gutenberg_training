@@ -16,7 +16,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run checkFormat"
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": "eslint",
+      "**/*.{js,json,css,scss}": [
+        "prettier --write",
+        "git add"
+      ]
     }
   },
   "author": "Fadi Nicolas Zahhar",
@@ -47,6 +56,7 @@
     "gulp": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
