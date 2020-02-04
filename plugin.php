@@ -15,7 +15,8 @@ function mytheme_block_register()
 {
     wp_register_script(
         'mytheme-blocks-firstblock-editor-script',
-        plugins_url('blocks/firstblock/index.js', __FILE__),
+        // chaning the plugin ulr to the dist of compiled javascript from webpack
+        plugins_url('dist/editor.js', __FILE__),
         ['wp-blocks', 'wp-i18n', 'wp-element']
     );
 
