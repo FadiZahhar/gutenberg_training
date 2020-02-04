@@ -43,7 +43,7 @@ function mytheme_block_register()
         'mytheme-blocks-script',
         // chaning the plugin ulr to the dist of compiled javascript from webpack
         plugins_url('dist/script.js', __FILE__),
-        ['']
+        ['jquery']
     );
     
     wp_register_style(

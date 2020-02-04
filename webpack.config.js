@@ -81,6 +81,10 @@ module.exports =  (env, argv) => {
 					]
 				}
 			]
+		},
+		externals: {
+		    jquery: "jQuery",
+		    "@wordpress/blocks": ["wp","blocks"]
 		}
 	};
 	return config;

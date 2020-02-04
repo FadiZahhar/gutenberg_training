@@ -1,6 +1,6 @@
 import './styles.editor.scss';
-const { registerBlockType } = wp.blocks;
-const { __ } = wp.i18n;
+import  { registerBlockType } from '@wordpress/blocks';
+import { __ } from '@wordpress/i18n';
 
 
 registerBlockType('mytheme-blocks/secondblock',{
