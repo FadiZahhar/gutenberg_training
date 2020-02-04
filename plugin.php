@@ -19,6 +19,9 @@ function mytheme_blocks_register_block_type($block, $options = array()){
         array_merge(
             array(
                 'editor_script' => 'mytheme-blocks-editor-script',
+                'editor_style' => 'mytheme-blocks-editor-style',
+                'script' => '',
+                'style' => '',
             ),
             $options
             )
@@ -34,6 +37,13 @@ function mytheme_block_register()
         // chaning the plugin ulr to the dist of compiled javascript from webpack
         plugins_url('dist/editor.js', __FILE__),
         ['wp-blocks', 'wp-i18n', 'wp-element']
+    );
+    
+    wp_register_style(
+        'mytheme-blocks-editor-style',
+        plugins_url('dist/editor.css',
+        __FILE__),
+        array('wp-edit-blocks')
     );
     
     
