@@ -3,10 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
@@ -23,7 +20,7 @@ module.exports = {
         "react"
     ],
     "rules": {
-        'no-console': 'off'
+        'no-console': 'error'
     }
     
 };

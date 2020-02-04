@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src",
     "start": "webpack --mode=development --watch",
-    "build": "webpack --mode=production && gulp bundle"
+    "build": "npm run lint && webpack --mode=production && gulp bundle"
   },
   "repository": {
     "type": "git",
