@@ -11,24 +11,34 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// creating a function to avoid repetetion in registering block types.
+// adding options as an empty array and using array_merge to merge first default option with the added options if required.
+function mytheme_blocks_register_block_type($block, $options = array()){
+    register_block_type(
+        'mytheme-blocks/'. $block,
+        array_merge(
+            array(
+                'editor_script' => 'mytheme-blocks-editor-script',
+            ),
+            $options
+            )
+        );
+}
+
 function mytheme_block_register()
 {
+    // chaning mytheme-blocks-firstblock-editor-script to mytheme-blocks-editor-script
+    // since we are bundeling all scripts into editor.js so any new import block we will be bundeled on save editor script.
     wp_register_script(
-        'mytheme-blocks-firstblock-editor-script',
+        'mytheme-blocks-editor-script',
         // chaning the plugin ulr to the dist of compiled javascript from webpack
         plugins_url('dist/editor.js', __FILE__),
         ['wp-blocks', 'wp-i18n', 'wp-element']
     );
+    
+    
+    mytheme_blocks_register_block_type('firstblock');
 
-    register_block_type(
-        'mytheme-blocks/firstblock',
-        [
-        'editor_script' => 'mytheme-blocks-firstblock-editor-script',
-        //'script' => '',
-        //'style' => '',
-        //'editor_style' => '',
-        ]
-    );
 }
 
 add_action('init', 'mytheme_block_register');
