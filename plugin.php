@@ -20,8 +20,8 @@ function mytheme_blocks_register_block_type($block, $options = array()){
             array(
                 'editor_script' => 'mytheme-blocks-editor-script',
                 'editor_style' => 'mytheme-blocks-editor-style',
-                'script' => '',
-                'style' => '',
+                'script' => 'mytheme-blocks-script',
+                'style' => 'mytheme-blocks-style',
             ),
             $options
             )
@@ -39,6 +39,13 @@ function mytheme_block_register()
         ['wp-blocks', 'wp-i18n', 'wp-element']
     );
     
+    wp_register_script(
+        'mytheme-blocks-script',
+        // chaning the plugin ulr to the dist of compiled javascript from webpack
+        plugins_url('dist/script.js', __FILE__),
+        ['']
+    );
+    
     wp_register_style(
         'mytheme-blocks-editor-style',
         plugins_url('dist/editor.css',
@@ -46,6 +53,12 @@ function mytheme_block_register()
         array('wp-edit-blocks')
     );
     
+     wp_register_style(
+        'mytheme-blocks-style',
+        plugins_url('dist/style.css',
+        __FILE__),
+        array('')
+    );
     
     mytheme_blocks_register_block_type('firstblock');
     mytheme_blocks_register_block_type('secondblock');
