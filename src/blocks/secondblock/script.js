@@ -1,9 +1,6 @@
-import './style.scss';
-import $ from 'jquery';
+import "./style.scss";
+import $ from "jquery";
 
-
-$(document).on("click",
-".wp-block-mytheme-blocks-secondblock",
-() =>{
-    alert(true)
-})
+$(document).on("click", ".wp-block-mytheme-blocks-secondblock", () => {
+  alert(true);
+});
