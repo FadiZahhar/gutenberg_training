@@ -1,1 +1,1 @@
-{"version":3,"sources":["css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/sass-loader/dist/cjs.js!./src/blocks/secondblock/styles.editor.scss"],"names":[],"mappings":"AAAA,qCAAqC,oBAAA","file":"editor.css","sourcesContent":[".wp-block-mytheme-blocks-secondblock{background-color:red}\n"]}
+{"version":3,"file":"editor.css","sources":["webpack:///./src/blocks/secondblock/styles.editor.scss"],"sourcesContent":[".wp-block-mytheme-blocks-secondblock {\n  background-color: red; }\n"],"mappings":"AAAA;AACA;;","sourceRoot":""}

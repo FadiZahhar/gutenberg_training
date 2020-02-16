@@ -34,6 +34,9 @@
   "homepage": "https://github.com/alialaa/gutenberg-course-webpack#readme",
   "dependencies": {
     "@wordpress/blocks": "^6.11.0",
+    "@wordpress/data": "^4.14.0",
+    "@wordpress/editor": "^9.12.0",
+    "@wordpress/html-entities": "^2.6.0",
     "@wordpress/i18n": "^3.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
