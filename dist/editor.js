@@ -51127,7 +51127,7 @@ function (_Component) {
       })) : wp.element.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, posts ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("No Posts Found", "mytheme-blocks") : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Loading...", "mytheme-blocks")));
@@ -51144,7 +51144,7 @@ function (_Component) {
     per_page: numberOfPosts
   };
   return {
-    posts: select('core').getEntityRecords('postType', 'post', query)
+    posts: select("core").getEntityRecords("postType", "post", query)
   };
 })(LatestPostEdit));
 
@@ -51167,11 +51167,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('mytheme-blocks/latest-posts', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Latest Posts', 'mytheme-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Block showing the latest posts', 'mytheme-blocks'),
-  icon: 'admin-post',
-  category: 'mytheme-category',
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])("mytheme-blocks/latest-posts", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Latest Posts", "mytheme-blocks"),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Block showing the latest posts", "mytheme-blocks"),
+  icon: "admin-post",
+  category: "mytheme-category",
   edit: _edit__WEBPACK_IMPORTED_MODULE_0__["default"],
   save: function save() {
     return null;
